@@ -1,0 +1,76 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <a href="/campgrounds">Go back</a>
+        <h1 class="show-name-create">Edit your profile <%= campground.name %></h1>
+            <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input class="form-control" type="text" name="campground[name]" value="<%= campground.name %>">
+                    </div>
+                    <div class="form-group">
+                        <label>Upload a Profile Image</label>
+                        <input class="form-control" type="text" name="campground[image]" value="<%= campground.image %>">
+                    </div>
+                    <div class="form-group">
+                        <label>Current City</label>
+                        <input class="form-control" type="text" name="campground[currentCity]" value="<%= campground.currentCity %>">
+                    </div>
+                    <div class="form-group">
+                        <label>Country</label>
+                        <input class="form-control" type="text" name="campground[currentCountry]" value="<%= campground.currentCountry %>">
+                    </div>
+                    <div class="form-group">
+                        <label>Where you make shit happen</label>
+                        <input class="form-control" type="text" name="campground[venue]" value="<%= campground.venue %>">
+                    </div>
+                    <div class="form-group">
+                        <label>Your story</label>
+                        <input class="form-control" type="text" name="campground[description]" value="<%= campground.description %>">
+                    </div>
+                    <div class="form-group">
+                        <label>What is your current role</label>
+                        <input class="form-control" type="text" name="campground[role]" value="<%= campground.role %>">
+                    </div>
+                    <div class="form-group">
+                        <label>What's your Insta profile?</label>
+                        <input class="form-control" type="text" name="campground[instaHandle]" value="<%= campground.instaHandle %>">
+                    </div>
+                    <div class="form-group">
+                        <label>And Twitter handle?</label>
+                        <input class="form-control" type="text" name="campground[twitterHandle]" value="<%= campground.twitterHandle %>">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Tell us your greatest hospo story</label>
+                        <input class="form-control" type="text" name="campground[greatestStory]" value="<%= campground.greatestStory %>">
+                    </div>
+                    <div class="form-group">
+                        <label>Your top 3 achievements</label>
+                        <input class="form-control" type="text" name="campground[achievements]" value="<%= campground.achievements %>">
+                    </div>
+                    <div class="form-group">
+                        <label>The top 3 things you're passionate about</label>
+                        <input class="form-control" type="text" name="campground[passionateAbout]" value="<%= campground.passionateAbout %>">
+                    </div>
+                    <div class="form-group">
+                        <label>What do you love about your industry?</label>
+                        <input class="form-control" type="text" name="campground[industryLove]" value="<%= campground.industryLove %>">
+                    </div>
+                    <div class="form-group">
+                        <label>What would you like to improve about your industry?</label>
+                        <input class="form-control" type="text" name="campground[industryImprove]" value="<%= campground.industryImprove %>">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-mtp-black btn-block">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<% include ../partials/footer %>

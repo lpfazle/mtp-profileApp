@@ -6,17 +6,18 @@ var express     = require("express"),
     flash       = require("connect-flash"),
     LocalStrategy = require("passport-local"),
     methodOverride = require("method-override"),
-    Campground  = require("./models/campground"),
+    Profile  = require("./models/profile"),
     Comment     = require("./models/comment"),
     User        = require("./models/user"),
     seedDB      = require("./seeds");
 
 // Requiring routes
 var commentRoutes       = require("./routes/comments"),
-    campgroundRoutes    = require("./routes/campgrounds"),
-    indexRoutes          = require("./routes/index");
+    profileRoutes    = require("./routes/profiles"),
+    indexRoutes          = require("./routes/index"),
+    jobRoutes          = require("./routes/jobs");
 
-mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://localhost/mtp_profiles");
 //seedDB();
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
@@ -26,7 +27,7 @@ app.use(flash());
 
 //PASSPORT CONFIG
 app.use(require("express-session")({
-    secret: "Taty is the cuteest ever",
+    secret: "Taty is the cutest ever",
     resave: false, 
     saveUninitialized: false
 }));
@@ -44,8 +45,9 @@ app.use(function(req, res, next){
 });
 
 app.use("/", indexRoutes);
-app.use("/campgrounds", campgroundRoutes);
-app.use("/campgrounds/:id/comments", commentRoutes);
+app.use("/profiles", profileRoutes);
+app.use("/profiles/:id/comments", commentRoutes);
+app.use("/jobs", jobRoutes);
 
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("The MTP Server Has Started!!!") 

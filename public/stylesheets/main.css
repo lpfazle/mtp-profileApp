@@ -1,11 +1,62 @@
-.navbar-brand {
+body {
+    border: 18px solid #000;
+    border-top: 0;
+    min-height: 100vh;
+} 
+
+p {
+   font-family: Roboto,sans-serif; 
+}
+
+a {
+    color: #000;
+}
+
+#profiles-back-btn {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.btn {
+    border-radius: 0;
+    font-family: Roboto,sans-serif; 
+}
+
+.navbar {
+    border-radius: 0px;
     font-family: Oswald,sans-serif;
+    background: #000;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.navbar-brand {
     font-weight: 400;
 }
 
 .nav li {
-    font-family: Oswald,sans-serif;
     text-transform: uppercase;
+}
+
+.jumbotron {
+    background-image: url("https://meetthepeeps.files.wordpress.com/2017/06/the_long_goodbye_014.jpg?w=1024");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 0px;
+    height: 350px;
+}
+
+#jumbotron-jobs {
+    background-image: url("https://meetthepeeps.files.wordpress.com/2017/06/alen_043.jpg");
+}
+
+.transbox {
+    background-position: 0% 25%;
+    background-color: #000;
+    margin-bottom: 30px;
+    height: 350px;
+    opacity: 0.9;
 }
 
 .btn-mtp-black {
@@ -22,13 +73,20 @@
     flex-wrap: wrap;
 }
 
-#left-show-h3-top {
-    padding-top: 20px;
+.social-list {
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+.social-list li {
+    font-size: 1.3em;
+    padding-top: 0.5em;
 }
 
 #mtp-h1 {
     font-family: Oswald,sans-serif;
     text-transform: uppercase;
+    padding-top: 50px;
 }
 
 #mtp-h4 {
@@ -73,10 +131,33 @@
 }
 
 .thumbnail .caption-full {
-    padding: 9px;
+    padding: 15px;
 }
 
 #delete-form {
     display: inline
 }
 
+/*.thumbnail {
+    position: relative;
+}
+
+.caption {
+        width:100%;
+        bottom: 1rem;
+        position: absolute;
+        padding-top: 10px;
+}
+*/
+.qoute {
+    font-family: Oswald,sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.5em;
+    margin: 12px 20px 12px;
+    background-color: #000;
+    text-align: center;
+    padding: 10px;
+}

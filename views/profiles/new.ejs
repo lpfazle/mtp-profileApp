@@ -1,13 +1,18 @@
 <% include ../partials/header %>
 <div class="container">
     <div class="row">
-        <a href="/campgrounds">Go back</a>
+        <a id="profiles-back-btn" class="btn btn-sm btn-default" href="/profiles">Go back</a>
         <h1 class="show-name-create">Create your profile</h1>
-            <form action="/campgrounds" method="POST">
+        <p id="mtp-h4-index" style="text-align: center">Tell us your story</p>
+            <form action="/profiles" method="POST">
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label>Your Name</label>
                         <input class="form-control" type="text" name="name" placeholder="Use your nickname.. this isnt LinkedIn">
+                    </div>
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input class="form-control" type="email" name="userEmail" placeholder="person@something">
                     </div>
                     <div class="form-group">
                         <label>Upload a Profile Image</label>

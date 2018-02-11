@@ -1,27 +1,29 @@
 <% include ../partials/header %>
 
-<div class="container">
+<div class="transbox">
     <header class="jumbotron">
         <div class="container">
             <h1 id="mtp-h1">Join Meetthepeople</h1>
             <p>Create your own MTP profile. Trust us, it's the TITS!</p>
             <p>
-            <a class="btn btn-default btn-lg" href="/campgrounds/new">Get Started</a>
+            <a class="btn btn-default btn-lg" href="/profiles/new">Get Started</a>
             </p>
         </div>
     </header>
-    
+</div>    
+
+<div class="container">
     <div id="thumbnail-row" class="row text-center">
-        <% campgrounds.forEach(function(campground){ %>
+        <% profiles.forEach(function(profile){ %>
             <div class="col-md-3 col-sm-6">
                <div class="thumbnail">
-                   <img src="<%=campground.image%>" class="img-responsive">
+                   <img src="<%=profile.image%>">
                    <div class="caption">
-                       <h4 class="profile-name"><%=campground.name%></h4>
-                       <h4 id="mtp-h4-index"><%= campground.role %> @ <strong><%= campground.venue %></strong></h4>
+                       <h4 class="profile-name"><%=profile.name%></h4>
+                       <h4 id="mtp-h4-index"><%= profile.role %> @ <strong><%= profile.venue %></strong></h4>
                    </div>
                    <p>
-                       <a href="/campgrounds/<%= campground._id %>" class="btn btn-xs btn-default">Meet Me</a>
+                       <a href="/profiles/<%= profile._id %>" class="btn btn-xs btn-default">Meet Me</a>
                    </p>
                </div>
             </div>

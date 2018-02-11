@@ -1,5 +1,5 @@
 var mongoose    = require("mongoose"),
-    Campground  = require("./models/campground"),
+    Profile  = require("./models/profile"),
     Comment     = require("./models/comment");
     
 var data = [
@@ -21,30 +21,30 @@ var data = [
 ]
     
 function seedDB(){
-    // Remove all campgrounds
-    Campground.remove({}, function(err){
+    // Remove all profiles
+    Profile.remove({}, function(err){
         if (err){
             console.log(err);
         }
-        console.log("REMOVED CAMPGROUNDS");
-        // Add in campgrounds
+        console.log("REMOVED PROFILES");
+        // Add in profiles
         data.forEach(function (seed) {
-          Campground.create(seed, function(err, campground){
+          Profile.create(seed, function(err, profile){
                   if (err){
                       console.log(err);
                   } else {
-                      console.log("ADDED A CAMPGROUND");
+                      console.log("ADDED A PROFILE");
                       // CREATE A COMMENT
                       Comment.create(
                           {
-                              text: "This campground is great but I wish there was WIFI",
+                              text: "This profile is great but I wish there was WIFI",
                               author: "Homer"
                           }, function(err, comment){
                               if (err){
                                   console.log(err)
                               } else{
-                                 campground.comments.push(comment);
-                                campground.save(); 
+                                 profile.comments.push(comment);
+                                profile.save(); 
                                 console.log("Created a comment");
                               }
                           });

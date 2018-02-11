@@ -1,18 +1,41 @@
-var Campground = require("../models/campground");
+var Profile = require("../models/profile");
 var Comment = require("../models/comment");
+var Job = require("../models/jobs");
 
 // ALL THE MIDDLEWARE GOES HERE
 var middlewareObj = {};
 
-middlewareObj.checkCampgroundOwnership = function(req, res, next) {
+middlewareObj.checkProfileOwnership = function(req, res, next) {
     if(req.isAuthenticated()){
-        Campground.findById(req.params.id, function(err, foundCampground){
+        Profile.findById(req.params.id, function(err, foundProfile){
            if (err){
-               req.flash("error", "Campground not found");
+               req.flash("error", "Profile not found");
                res.redirect("back");
            } else {
-               // does user own campground?
-                if(foundCampground.author.id.equals(req.user._id)){
+               // does user own profile?
+                if(foundProfile.author.id.equals(req.user._id)){
+                  next();
+                } else {
+                    req.flash("error", "You don't have permission to do that");
+                   res.redirect("back");
+                }
+            }
+        });
+    } else {
+        req.flash("error", "You need to be logged in to do that!");
+        res.redirect("back");
+    }
+};
+
+middlewareObj.checkJobOwnership = function(req, res, next) {
+    if(req.isAuthenticated()){
+        Job.findById(req.params.id, function(err, foundJob){
+           if (err){
+               req.flash("error", "Job not found");
+               res.redirect("back");
+           } else {
+               // does user own job?
+                if(foundJob.author.id.equals(req.user._id)){
                   next();
                 } else {
                     req.flash("error", "You don't have permission to do that");

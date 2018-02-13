@@ -18,7 +18,8 @@ var jobSchema = new mongoose.Schema({
          type: mongoose.Schema.Types.ObjectId,
          ref: "Comment"
       }
-   ]
+   ],
+   date: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model("jobs", jobSchema);

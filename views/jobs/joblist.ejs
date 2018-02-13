@@ -4,10 +4,9 @@
     <header id="jumbotron-jobs" class="jumbotron">
         <div class="container">
             <h1 id="mtp-h1">MTP Job board</h1>
-            <p>Add a job so so you can find a legend</p>
-            <p>
-            <a class="btn btn-default btn-lg" href="/jobs/new">List a job</a>
-            </p>
+            <h2>Add a job and find your future legends</h2>
+            <br>
+            <a class="btn btn-default btn-lg" href="/jobs/new">LIST A JOB ></a>
         </div>
     </header>
 </div> 
@@ -15,7 +14,7 @@
 <div class="container">
     <div id="thumbnail-row" class="row text-center">
         <% jobs.forEach(function(job){ %>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6 col-xs-12">
                <div class="thumbnail">
                    <div class="caption">
                         <h4 class="profile-name"><strong><%=job.jobVenueName%></strong></h4>

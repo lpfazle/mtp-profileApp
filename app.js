@@ -17,7 +17,9 @@ var commentRoutes       = require("./routes/comments"),
     indexRoutes          = require("./routes/index"),
     jobRoutes          = require("./routes/jobs");
 
-mongoose.connect("mongodb://localhost/mtp_profiles");
+//mongoose.connect("mongodb://localhost/mtp_profiles");
+mongoose.connect("mongodb://elcapitano:20Vills09@ds121965.mlab.com:21965/mtpprofiles");
+
 //seedDB();
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");

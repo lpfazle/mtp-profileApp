@@ -5,9 +5,7 @@
         <div class="col-md-9">
             <h2>Dont you want to be the</h2>
             <h1 class="show-name"><%= jobs.jobRole %> @ <strong><%= jobs.jobVenueName %></strong>?</h1>
-            <p>
-               <em>Submitted by <%= jobs.jobAuthor.username %></em>
-            </p>            
+            <br>
             <div class="thumbnail">
                 <div class="caption-full">
                     <strong><p>Job description</p></strong>
@@ -20,7 +18,12 @@
                 <div class="caption-full">
                     <strong><p>Interested? Contact</p></strong>
                     <p>Liam on 040000000</p>
-                    <p>email: liam@mtphq.com</p>
+                    <p>email: <a href="mailto:liam@mtphq.com">liam@mtphq.com</a></p>
+                </div>     
+                <div>                                    
+                    <div class="caption-full">
+                        <p>posted by <%= jobs.jobAuthor.username %> on <%= jobs.date %></p>
+                    </div>
                 </div>
             </div>
         </div>

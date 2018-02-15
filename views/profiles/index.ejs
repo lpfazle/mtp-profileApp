@@ -1,35 +1,33 @@
 <% include ../partials/header %>
 
-<div class="transbox">
+<div class="container">
     <header class="jumbotron">
         <div class="container">
-            <h1 id="mtp-h1">Join Meetthepeople</h1>
-            <h2>Create your own MTP profile and start telling your story</h2>
-            <br>
-            <p>
-            <a class="btn btn-default btn-lg" href="/profiles/new">CREATE A PROFILE ></a>
-            </p>
+            <h1 id="mtp-h1">Share your own story</h1>
+            <p>Simply create your own MTP profile to share your unique story.</p>
+            <a class="btn btn-secondary btn-lg" href="#">CREATE A PROFILE</a>
         </div>
     </header>
-</div>    
 
-<div class="container">
-    <div id="thumbnail-row" class="row text-center">
-        <% profiles.forEach(function(profile){ %>
-            <div class="col-md-3 col-sm-6">
-               <div class="thumbnail">
-                   <img src="<%=profile.image%>">
-                   <div class="caption">
-                       <h4 class="profile-name"><%=profile.name%></h4>
-                       <h4 id="mtp-h4-index"><%= profile.role %> @ <strong><%= profile.venue %></strong></h4>
-                   </div>
-                   <p>
-                       <a href="/profiles/<%= profile._id %>" class="btn btn-xs btn-default">Meet Me</a>
-                   </p>
-               </div>
-            </div>
-        <% }); %> 
+    <!-- SECTION 1 -->
+    <div class="profiles-section1">
+      <h2>MEET OUR LATEST PROFILES</h2>
+      <h5>Get to know some of the amazing people in our service industries who have shared their story</h5>
     </div>
+    
+    <!-- PROFILE CARDS -->
+    <% profiles.forEach(function(profile){ %>
+        <div class="card-columns">
+            <div class="card">
+                    <img class="card-img-top img-fluid" src="<%= profile.image %>">
+                    <h4 class="card-title"><%=profile.name%></h4>
+                    <p class="card-text"><%= profile.role %> @ <strong><%= profile.venue %></strong></p>
+                    <p>
+                        <a href="/profiles/<%= profile._id %>" class="btn btn-outline-info">Meet Me</a>
+                    </p>
+            </div>
+        </div>
+    <% }); %> 
 </div>
 
 <% include ../partials/footer %>

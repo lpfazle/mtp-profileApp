@@ -1,75 +1,92 @@
 body {
-    border: 18px solid #000;
-    border-top: 0;
-    min-height: 100vh;
+    font-family: Roboto,sans-serif; 
 } 
 
 p {
-   font-family: Roboto,sans-serif; 
+    font-family: Roboto,sans-serif;
 }
 
-a {
-    color: #000;
+h1 {
+   font-family: Oswald,sans-serif;
+}
+
+h2 {
+   font-family: Oswald,sans-serif;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+.jumbotron {
+    padding-top: 50px;
+    background-image: url("https://image.ibb.co/n4UG5n/toby_header.jpg");
+    background-size: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.profiles-section1 {
+    background-color: #eafcfc;
+    padding: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card {
+    font-family: Oswald,sans-serif;
+    padding: 10px;
+}
+
+.card-title {
+    text-transform: uppercase;
+}
+
+.card-text {
+    padding-bottom: 10px;
+}
+
+#card-no-outline {
+    border-style: none;
+}
+
+.btn {
+    font-family: Oswald,sans-serif;
+}
+
+.navbar {
+    height: auto;
+    border-radius: 0px;
+    font-family: Oswald,sans-serif;
+}
+
+.navbar-brand {
+    font-weight: 3em;
+}
+
+.nav li {
+    text-transform: uppercase;
+    font-size: 1.5em;
 }
 
 #beta {
     font-size: 0.5em;
 }
 
-#profiles-back-btn {
+.footer-section {
+    background-color: #fff9f4;
+    padding: 50px;
+    padding-bottom: 100px;
+    padding-left: 100px;
     margin-top: 20px;
-    margin-left: 10px;
 }
 
-.btn {
-    border-radius: 0;
-    font-family: Oswald,sans-serif;
+.footer-section ul {
+    list-style: none;
 }
 
-.navbar {
-    border-radius: 0px;
-    font-family: Oswald,sans-serif;
-    background: #000;
-    color: #fff;
-    margin-bottom: 0;
-}
-
-.navbar-brand {
-    font-weight: 400;
-}
-
-.nav li {
-    text-transform: uppercase;
-}
-
-.jumbotron {
-    background-image: url("https://image.ibb.co/eCvvVn/the_long_goodbye_014_dark.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    padding: 0px;
-    height: 350px;
-}
-
-#jumbotron-jobs {
-    background-image: url("https://image.ibb.co/ksifAn/mtp_jobs_header.jpg");
-}
-
-.transbox {
-    background-position: 0% 25%;
-    background-color: #000;
-    margin-bottom: 30px;
-    height: 350px;
-    opacity: 0.9;
-}
-
-.btn-mtp-black {
-    background-color: #000;
-    color: #fff;
-}
-
-.btn-mtp-black:hover {
-    color: #dee0e2;
+.footer-section a {
+    color: #000;
 }
 
 #thumbnail-row {
@@ -90,7 +107,6 @@ a {
 #mtp-h1 {
     font-family: Oswald,sans-serif;
     text-transform: uppercase;
-    padding-top: 50px;
 }
 
 #mtp-h4 {
@@ -115,6 +131,7 @@ a {
     font-weight: 400;
     font-size: 3em;
     text-transform: uppercase;
+    margin-top: 10px;
 }
 
 .show-name-create {
@@ -126,33 +143,15 @@ a {
     text-align: center;
 }
 
-.thumbnail img {
-    width: 100%;
-}
-
-.thumbnail {
-    padding: 0;
-}
-
-.thumbnail .caption-full {
-    padding: 15px;
+#show-btn {
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 #delete-form {
     display: inline
 }
 
-/*.thumbnail {
-    position: relative;
-}
-
-.caption {
-        width:100%;
-        bottom: 1rem;
-        position: absolute;
-        padding-top: 10px;
-}
-*/
 .qoute {
     font-family: Oswald,sans-serif;
     text-transform: uppercase;

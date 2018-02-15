@@ -1,38 +1,36 @@
 <% include ../partials/header %>
 <div class="container">
-    <a id="profiles-back-btn" class="btn btn-sm btn-default" href="/profiles">Back to profiles</a>
+    <a id="show-btn" class="btn btn-secondary btn-sm" href="/profiles">Back to profiles</a>
     <div class="row">
         <div class="col-md-9">
-            <h1 class="show-name">MEET <%=profile.name%></h1>
-            <h4 id="mtp-h4"><%= profile.role %> @ <strong><%= profile.venue %></strong></h4>
-            <div class="thumbnail">
-                <div class="row" id="box-search">
-                    <img class="img-responsive" src="<%= profile.image %>">
-                </div>
-                <p class="qoute">"<%= profile.greatestStory %>"</p>                
-                <div class="caption-full">
-                    <strong><p>So tell us a little about yourself <%=profile.name%></p></strong>
-                    <p><%= profile.description %></p>
-                    <strong><p>Tell us your greatest hospo story</p></strong>
-                    <p><%= profile.greatestStory %></p>
-                    <strong><p>Tell us your top 3 achievements you are most proud of</p></strong>
-                    <p><%= profile.achievements %></p>
-                    <strong><p>What about the top 3 things you're passionate about</p></strong>
-                    <p><%= profile.passionateAbout %></p>
-                    <strong><p>What is it you love about your industry and job?</p></strong>
-                    <p><%= profile.industryLove %></p>
-                    <strong><p>What is it you would like to improve in your industry?</p></strong>
-                    <p><%= profile.industryImprove %></p>
-                    <p>
-                        <em>Submitted by <%= profile.author.username %></em>
-                    </p>
-                    <% if(currentUser && profile.author.id.equals(currentUser._id)){ %>
-                    <a class="btn btn-xs btn-warning" href="/profiles/<%= profile._id %>/edit">Edit</a>
-                    <form id="delete-form" action="/profiles/<%= profile._id %>?_method=DELETE" method="POST">
-                        <button class="btn btn-xs btn-danger">Delete</button>
-                    </form>
-                    <% } %>
-                </div>
+            <div id="card-no-outline" class="card">
+                    <h1 class="card-title">MEET <%=profile.name%></h1>
+                    <h4 class="card-text"><%= profile.role %> @ <strong><%= profile.venue %></strong></h4>
+                    <img class="card-img-top img-fluid" src="<%= profile.image %>">
+                    <p class="qoute">"<%= profile.greatestStory %>"</p>                
+                    <div class="caption-full">
+                            <strong><p>So tell us a little about yourself <%=profile.name%></p></strong>
+                            <p><%= profile.description %></p>
+                            <strong><p>Tell us your greatest hospo story</p></strong>
+                            <p><%= profile.greatestStory %></p>
+                            <strong><p>Tell us your top 3 achievements you are most proud of</p></strong>
+                            <p><%= profile.achievements %></p>
+                            <strong><p>What about the top 3 things you're passionate about</p></strong>
+                            <p><%= profile.passionateAbout %></p>
+                            <strong><p>What is it you love about your industry and job?</p></strong>
+                            <p><%= profile.industryLove %></p>
+                            <strong><p>What is it you would like to improve in your industry?</p></strong>
+                            <p><%= profile.industryImprove %></p>
+                            <p>
+                                <em>Submitted by <%= profile.author.username %></em>
+                            </p>
+                            <% if(currentUser && profile.author.id.equals(currentUser._id)){ %>
+                            <a class="btn btn-xs btn-warning" href="/profiles/<%= profile._id %>/edit">Edit</a>
+                            <form id="delete-form" action="/profiles/<%= profile._id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-xs btn-danger">Delete</button>
+                            </form>
+                            <% } %>
+                    </div>
             </div>
         </div>
         <div class="col-sm-3 mb20">
@@ -40,8 +38,8 @@
                 <h4>Follow this legend</h4>
                 <div class="list-group">
                     <ul class="social-list">
-                        <li><i class="fa fa-instagram" aria-hidden="true"></i> /<%= profile.instaHandle %></li>
-                        <li><i class="fa fa-twitter" aria-hidden="true"></i> /<%= profile.twitterHandle %></li>
+                        <li><i class="fa fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/<%= profile.instaHandle %>" target="_blank">/<%= profile.instaHandle %></a></li>
+                        <li><i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/<%= profile.twitterHandle %>" target="_blank">/<%= profile.twitterHandle %></a></li>
                     </ul>
                 </div>
         </div>

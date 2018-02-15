@@ -18,6 +18,24 @@ h5 {
     font-size: 1em;
 }
 
+label {
+    font-weight: bold;
+}
+
+tr {
+    line-height: 40px;
+}
+
+th {
+    font-family: Oswald,sans-serif;
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+.table-header {
+    background-color: #F0F0F0;
+}
+
 .jumbotron {
     padding-top: 50px;
     background-image: url("https://image.ibb.co/n4UG5n/toby_header.jpg");
@@ -27,8 +45,19 @@ h5 {
     margin-top: 20px;
 }
 
+.jumbotron-2 {
+    background-image: url("https://i.imgur.com/XvV2Kju.jpg");
+}
+
 .profiles-section1 {
     background-color: #eafcfc;
+    padding: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.jobs-section1 {
+    background-color: #ecf9e3;
     padding: 50px;
     margin-bottom: 20px;
     text-align: center;
@@ -75,7 +104,7 @@ h5 {
 }
 
 .footer-section {
-    background-color: #fff9f4;
+    background-color: #F0F0F0;
     padding: 50px;
     padding-bottom: 100px;
     padding-left: 100px;
@@ -171,6 +200,3 @@ h5 {
     padding: 10px;
 }
 
-.login-form {
-    btn btn-lg btn-outline-primary btn-block
-}

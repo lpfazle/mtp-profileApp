@@ -1,1 +1,34 @@
-<h1>hi this works</h1>
+<% include ../partials/header %>
+<div class="container">
+<a id="show-btn" class="btn btn-secondary btn-sm" href="/jobs">Back to jobs list</a>
+    <div class="row">
+        <div class="col-md-6 offset-md-3" style="text-align: center;" >
+            <h1 id="mtp-h1">Create a job ad</h1>
+            <p>Make it special. You want the best people</p>
+            <br>
+        </div>
+    </div>
+    <div>
+        <form action="/jobs" method="POST">
+            <div class="col-md-6 offset-md-3">
+                <div class="form-group">
+                    <label>Job role</label>
+                    <input class="form-control" type="text" name="jobRole" placeholder="Job title can be creative of course">
+                </div>
+                <div class="form-group">
+                    <label>Business Name</label>
+                    <input class="form-control" type="text" name="jobVenueName" placeholder="Best place to work I'm sure">
+                </div>
+                <div class="form-group">
+                    <label>Job Description</label>
+                    <textarea class="form-control" rows="5" type="text" name="jobDescription" placeholder="Tell us what you are looking for"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-outline-primary btn-block">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer %>

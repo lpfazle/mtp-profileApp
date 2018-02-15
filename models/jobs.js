@@ -6,6 +6,10 @@ var jobSchema = new mongoose.Schema({
    jobRole: String,
    jobCity: String,
    jobCountry: String,
+   jobContactName: String, 
+   jobContactPhone: String, 
+   jobContactEmail: String,
+   jobStartDate: String,
    jobAuthor: {
       id: {
          type: mongoose.Schema.Types.ObjectId,

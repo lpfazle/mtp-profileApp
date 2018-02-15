@@ -20,13 +20,17 @@ router.post("/", middleware.isLoggedIn, function(req, res){
    var jobVenueName = req.body.jobVenueName;
    var jobDesc = req.body.jobDescription;
    var jobRole = req.body.jobRole;
+   var jobStartDate = req.body.jobStartDate;
    var jobCity = req.body.jobCity;
    var jobCountry = req.body.jobCountry;
+   var jobContactName = req.body.jobContactName;
+   var jobContactPhone = req.body.jobContactPhone;
+   var jobContactEmail = req.body.jobContactEmail;
    var jobAuthor = {
        id: req.user._id,
        username: req.user.username
    }
-   var newJob = {jobVenueName: jobVenueName, jobDesc: jobDesc, jobRole: jobRole, jobCity: jobCity, jobCountry: jobCountry, jobAuthor: jobAuthor}
+   var newJob = {jobVenueName: jobVenueName, jobDesc: jobDesc, jobRole: jobRole, jobStartDate: jobStartDate, jobCity: jobCity, jobCountry: jobCountry, jobAuthor: jobAuthor, jobContactName: jobContactName, jobContactPhone: jobContactPhone, jobContactEmail: jobContactEmail}
    //Create a new job and save to DB
    Jobs.create(newJob, function(err, newlyCreatedJob){
        if(err){

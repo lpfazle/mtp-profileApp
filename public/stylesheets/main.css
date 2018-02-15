@@ -42,8 +42,9 @@ th {
 .jumbotron {
     padding-top: 50px;
     background-image: url("https://image.ibb.co/n4UG5n/toby_header.jpg");
-    background-size: 100%;
-    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 125%;
+    height: auto;
     margin-bottom: 20px;
     margin-top: 20px;
 }

@@ -33,6 +33,10 @@ th {
     width: auto;
 }
 
+footer {
+    background-color: #F0F0F0;
+}
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     [class*="col-"] {
@@ -113,7 +117,6 @@ th {
 }
 
 .footer-section {
-    background-color: #F0F0F0;
     padding-bottom: 100px;
     margin-top: 20px;
     padding-top: 30px;

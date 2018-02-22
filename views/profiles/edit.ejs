@@ -34,25 +34,29 @@
                         <input class="form-control" type="text" name="profile[venue]" value="<%= profile.venue %>">
                     </div>
                     <div class="form-group">
-                        <label>Your story</label>
-                        <input class="form-control" type="text" name="profile[description]" value="<%= profile.description %>">
-                    </div>
-                    <div class="form-group">
                         <label>What is your current role</label>
                         <input class="form-control" type="text" name="profile[role]" value="<%= profile.role %>">
                     </div>
-                    <div class="form-group">
-                        <label>What's your Insta profile?</label>
-                        <input class="form-control" type="text" name="profile[instaHandle]" value="<%= profile.instaHandle %>">
+                     <div class="form-group">
+                    <label>What's your Insta profile?</label>
+                    <p class="form-control">@<input class="col-md-4" type="text" name="profile[instaHandle]" value="<%= profile.instaHandle %>"></p>
                     </div>
                     <div class="form-group">
                         <label>And Twitter handle?</label>
-                        <input class="form-control" type="text" name="profile[twitterHandle]" value="<%= profile.twitterHandle %>">
+                        <p class="form-control">@ <input class="col-md-4" type="text" name="profile[twitterHandle]" value="<%= profile.twitterHandle %>"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>A little quote you live by</label>
+                        <input class="form-control" type="text" name="profile[quote]" value="<%= profile.quote %>">
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label>Tell us your greatest hospo story</label>
+                        <label>Your intro about yourself</label>
+                        <input class="form-control" type="text" name="profile[description]" value="<%= profile.description %>">
+                    </div>
+                    <div class="form-group">
+                        <label>Your greatest hospo story</label>
                         <input class="form-control" type="text" name="profile[greatestStory]" value="<%= profile.greatestStory %>">
                     </div>
                     <div class="form-group">

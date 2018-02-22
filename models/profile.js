@@ -11,12 +11,14 @@ var profileSchema = new mongoose.Schema({
    currentCountry: String,
    instaHandle: String,
    twitterHandle: String,
-   greatestStory: String,
+   learnSkills: String,
    achievements: String,
    passionateAbout: String,
    inspiration: String,
    industryLove: String,
    industryImprove: String,
+   image: String,
+   quote: String,
    author: {
       id: {
          type: mongoose.Schema.Types.ObjectId,

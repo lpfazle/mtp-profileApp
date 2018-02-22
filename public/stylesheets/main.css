@@ -22,14 +22,15 @@ label {
     font-weight: bold;
 }
 
-tr {
-    line-height: 40px;
-}
+/*tr {
+    width: 100%;
+}*/
 
 th {
     font-family: Oswald,sans-serif;
     font-weight: normal;
-    font-size: 1.8em;
+    font-size: 1.1em;
+    width: auto;
 }
 
 @media only screen and (max-width: 768px) {
@@ -95,6 +96,7 @@ th {
     height: auto;
     border-radius: 0px;
     font-family: Oswald,sans-serif;
+    background-color: #F8F8F8;
 }
 
 .navbar-brand {
@@ -198,13 +200,43 @@ th {
 .qoute {
     font-family: Oswald,sans-serif;
     text-transform: uppercase;
-    color: #fff;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.5em;
     margin: 12px 20px 12px;
-    background-color: #000;
+    background-color: #F8F8F8;
     text-align: center;
     padding: 10px;
 }
 
+@media (min-width: 34em) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (min-width: 48em) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (min-width: 62em) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}
+
+@media (min-width: 75em) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}

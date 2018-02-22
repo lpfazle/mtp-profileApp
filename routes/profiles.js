@@ -9,7 +9,7 @@ var path = require("path");
 var storage = multer.diskStorage({
    destination: "./public/uploads/profiles/",
    filename: function(req, file, cb){
-       cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname));
+       cb(null, new Date().toISOString() + "-" + file.originalname);
    }
 });
 
@@ -31,30 +31,32 @@ router.get("/", function(req, res){
 });
 
 // CREATE new profile route
-router.post("/", middleware.isLoggedIn, function(req, res){
-   var name = req.body.name;
-   var userEmail = req.body.userEmail;
-   var image = req.body.image;
-   var desc = req.body.description;
-   var venue = req.body.venue;
-   var role = req.body.role;
-   var currentCity = req.body.currentCity;
-   var currentCountry = req.body.currentCountry;
-   var instaHandle = req.body.instaHandle;
-   var twitterHandle = req.body.twitterHandle;
-   var greatestStory = req.body.greatestStory;  
-   var achievements = req.body.achievements;
-   var passionateAbout = req.body.passionateAbout;
-   var inspiration = req.body.inspiration;
-   var industryLove = req.body.industryLove;
-   var industryImprove = req.body.industryImprove;
-   var author = {
+router.post("/", upload, function(req, res){
+    console.log(req.file);
+    var name = req.body.name;
+    var userEmail = req.body.userEmail;
+    var image = req.body.image;
+    var desc = req.body.description;
+    var venue = req.body.venue;
+    var role = req.body.role;
+    var currentCity = req.body.currentCity;
+    var currentCountry = req.body.currentCountry;
+    var instaHandle = req.body.instaHandle;
+    var twitterHandle = req.body.twitterHandle;
+    var learnSkills = req.body.learnSkills;  
+    var achievements = req.body.achievements;
+    var passionateAbout = req.body.passionateAbout;
+    var inspiration = req.body.inspiration;
+    var industryLove = req.body.industryLove;
+    var industryImprove = req.body.industryImprove;
+    var quote = req.body.quote;
+    var author = {
        id: req.user._id,
        username: req.user.username
    }
-   var newProfile = {name: name, userEmail: userEmail, image: image, description: desc, author:author, venue:venue, role:role, currentCity:currentCity, currentCountry:currentCountry, instaHandle:instaHandle, twitterHandle:twitterHandle, greatestStory:greatestStory, achievements:achievements, passionateAbout:passionateAbout, inspiration:inspiration, industryLove:industryLove, industryImprove:industryImprove}
+    var newProfile = {name: name, userEmail: userEmail, image: image, description: desc, author:author, venue:venue, qoute: quote, role:role, currentCity:currentCity, currentCountry:currentCountry, instaHandle:instaHandle, twitterHandle:twitterHandle, learnSkills:learnSkills, achievements:achievements, passionateAbout:passionateAbout, inspiration:inspiration, industryLove:industryLove, industryImprove:industryImprove}
    //Create a new profile and save to DB
-   Profile.create(newProfile, function(err, newlyCreated){
+    Profile.create(newProfile, function(err, newlyCreated){
        if(err){
            console.log(err);
        } else {
@@ -66,7 +68,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
 });
 
 // NEW Route
-router.get("/new", middleware.isLoggedIn, function(req, res){
+router.get("/new", function(req, res){
     res.render("profiles/new");
 });
 

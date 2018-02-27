@@ -38,6 +38,9 @@ footer {
     padding-top: 10px;
 }
 
+textarea.form-control::-webkit-input-placeholder { color: Silver; }  /* WebKit, Blink, Edge */
+input.form-control::-webkit-input-placeholder { color: Silver; }  /* WebKit, Blink, Edge */
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     [class*="col-"] {

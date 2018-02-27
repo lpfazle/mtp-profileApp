@@ -54,7 +54,7 @@ router.post("/", upload, function(req, res){
        id: req.user._id,
        username: req.user.username
    }
-    var newProfile = {name: name, userEmail: userEmail, image: image, description: desc, author:author, venue:venue, qoute: quote, role:role, currentCity:currentCity, currentCountry:currentCountry, instaHandle:instaHandle, twitterHandle:twitterHandle, learnSkills:learnSkills, achievements:achievements, passionateAbout:passionateAbout, inspiration:inspiration, industryLove:industryLove, industryImprove:industryImprove}
+    var newProfile = {name: name, userEmail: userEmail, image: image, description: desc, author:author, venue:venue, quote: quote, role:role, currentCity:currentCity, currentCountry:currentCountry, instaHandle:instaHandle, twitterHandle:twitterHandle, learnSkills:learnSkills, achievements:achievements, passionateAbout:passionateAbout, inspiration:inspiration, industryLove:industryLove, industryImprove:industryImprove}
    //Create a new profile and save to DB
     Profile.create(newProfile, function(err, newlyCreated){
        if(err){

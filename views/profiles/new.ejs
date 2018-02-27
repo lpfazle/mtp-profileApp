@@ -4,14 +4,14 @@
     <div class="row">
         <div class="col-md-6 offset-md-3" style="text-align: center;" >
             <h1 id="mtp-h1">Create a profile</h1>
-            <p>Tell you own story and connect with our network of legends</p>
+            <p>Share your own story and connect with like-minded legends</p>
             <br>
         </div>
         <div class="col-md-6">
         <form action="/profiles" method="POST">
                 <div class="form-group">
                     <label>Your Name</label>
-                    <input class="form-control" type="text" name="name" placeholder="Nickname is fine.. this isnt LinkedIn" required>
+                    <input class="form-control" type="text" name="name" placeholder="A nickname is fine.. this isnt LinkedIn" required>
                 </div>
                 <div class="form-group">
                     <label>Your Email</label>
@@ -24,23 +24,23 @@
                 </div>
                 <div class="form-group">
                     <label>Where do you currently work?</label>
-                    <input class="form-control" type="text" name="venue" placeholder="Your current workplace will do" required>
+                    <input class="form-control" type="text" name="venue" required>
                 </div>
                 <div class="form-group">
                     <label>What is your current role?</label>
-                    <input class="form-control" type="text" name="role" placeholder="Aside from being a legend" required>
+                    <input class="form-control" type="text" name="role" required>
                 </div>
                 <div class="form-group">
                     <label>Your Current City</label>
-                    <input class="form-control" type="text" name="currentCity" placeholder="Where you work and reside" required>
+                    <input class="form-control" type="text" name="currentCity" required>
                 </div>
                 <div class="form-group">
                     <label>Your Country</label>
-                    <input class="form-control" type="text" name="currentCountry" placeholder="3 letter abbreviation please Ie. AUS" required>
+                    <input class="form-control" type="text" name="currentCountry" maxlength="3" placeholder="3 letter abbreviation please Ie. AUS" required>
                 </div>
                 <div class="form-group">
                     <label>What's your Insta profile?</label>
-                    <p class="form-control">@<input class="col-md-4" type="text" name="instaHandle"></p>
+                    <p class="form-control">@ <input class="col-md-4" type="text" name="instaHandle"></p>
                 </div>
                 <div class="form-group">
                     <label>And Twitter handle?</label>
@@ -48,33 +48,33 @@
                 </div>
                 <div class="form-group">
                     <label>Tell us a little quote you live by</label>
-                    <textarea class="form-control" rows="3" type="text" name="quote" placeholder="Max 200 characters please" required></textarea>
+                    <textarea class="form-control" rows="3" maxlength="200" type="text" name="quote" placeholder="Max 200 characters please" required></textarea>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
                     <label>Tell us a little intro about yourself</label>
-                    <textarea class="form-control" rows="5" type="text" name="description" placeholder="Just a paragraph on what your about" required></textarea>
+                    <textarea class="form-control" rows="5" type="text" maxlength="1000" name="description" placeholder="How ended up where you are. Max 1000 characters" required></textarea>
                 </div>
                 <div class="form-group">
                     <label>Where did you cut your teeth and what lessons did you learn?</label>
-                    <textarea class="form-control" rows="5" type="text" name="learnSkills" placeholder="Make it juicy and interesting" required></textarea>
+                    <textarea class="form-control" rows="5" type="text" name="learnSkills" maxlength="1000" placeholder="Tell us a the juicy and interesting stories." required></textarea>
                 </div>
                 <div class="form-group">
-                    <label>Whats your greatest achievement?</label>
-                    <textarea class="form-control" rows="3" type="text" name="achievements" placeholder="We know you're a winner" required></textarea>
+                    <label>What's your greatest achievement?</label>
+                    <textarea class="form-control" rows="3" type="text" name="achievements" maxlength="600" placeholder="We know you're a winner" required></textarea>
                 </div>
                 <div class="form-group">
                     <label>What are you passionate about?</label>
-                    <textarea class="form-control" rows="3" type="text" name="passionateAbout" placeholder="Don't be lame and say cocktails" required></textarea>
+                    <textarea class="form-control" rows="3" type="text" name="passionateAbout" maxlength="600" placeholder="Don't be lame and say cocktails" required></textarea>
                 </div>
                 <div class="form-group">
                     <label>What do you love about your industry?</label>
-                    <textarea class="form-control" rows="3" type="text" name="industryLove" placeholder="What don't I love.. am I right?" required></textarea>
+                    <textarea class="form-control" rows="3" type="text" name="industryLove" maxlength="600" placeholder="Unleash the compliments" required></textarea>
                 </div>
                 <div class="form-group">
                     <label>If you could change something about your industry what would it be?</label>
-                    <textarea class="form-control" rows="3" type="text" name="industryImprove" placeholder="Go on, we're all friends here" required></textarea>
+                    <textarea class="form-control" rows="3" type="text" name="industryImprove" maxlength="1000" placeholder="Go on, we're all friends here" required></textarea>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-lg btn-outline-primary btn-block">Submit</button>

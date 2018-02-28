@@ -78,9 +78,17 @@ input.form-control::-webkit-input-placeholder { color: Silver; }  /* WebKit, Bli
     text-align: center;
 }
 
+.cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+ 
 .card {
+    flex: 0 1 24%;
     font-family: Oswald,sans-serif;
     padding: 10px;
+    margin-top: 10px;
 }
 
 .card-title {
@@ -216,34 +224,35 @@ input.form-control::-webkit-input-placeholder { color: Silver; }  /* WebKit, Bli
     padding: 10px;
 }
 
-@media (min-width: 34em) {
-    .card-columns {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
+/* Flexbox stuff */
+
+@media screen and (min-width : 20em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        flex: 0 1 calc(100% - 1em);
     }
 }
 
-@media (min-width: 48em) {
-    .card-columns {
-        -webkit-column-count: 3;
-        -moz-column-count: 3;
-        column-count: 3;
+@media screen and (min-width: 40em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 1em);
     }
 }
 
-@media (min-width: 62em) {
-    .card-columns {
-        -webkit-column-count: 4;
-        -moz-column-count: 4;
-        column-count: 4;
-    }
-}
+@media screen and (min-width: 60em) {
 
-@media (min-width: 75em) {
-    .card-columns {
-        -webkit-column-count: 4;
-        -moz-column-count: 4;
-        column-count: 4;
+    .card {
+        flex: 0 1 calc(25% - 1em);
     }
 }

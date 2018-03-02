@@ -42,6 +42,15 @@
                         <li><i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/<%= profile.twitterHandle %>" target="_blank">/<%= profile.twitterHandle %></a></li>
                     </ul>
                 </div>
+                </br>
+                <h2 id="mtp-h4"><%= profile.name %> recommends </h2>
+                <div class="list-group">
+                    <ul class="social-list">
+                        <li><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><p><%= profile.recommendsFirst %></p></li>
+                        <li><i class="fa fa-star"><i class="fa fa-star"></i></i><p><%= profile.recommendsSecond %></p></li>
+                        <li><i class="fa fa-star"></i><p><%= profile.recommendsThird %></p></li>
+                    </ul>
+                </div>
         </div>
     </div>
     <div class="row">

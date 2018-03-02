@@ -19,6 +19,9 @@ var profileSchema = new mongoose.Schema({
    industryImprove: String,
    image: String,
    quote: String,
+   recommendsFirst: String,
+   recommendsSecond: String,
+   recommendsThird: String,
    author: {
       id: {
          type: mongoose.Schema.Types.ObjectId,

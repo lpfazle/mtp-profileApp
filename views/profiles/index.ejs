@@ -18,20 +18,20 @@
 
     <!-- PROFILE CARDS -->
     <section class="cards">
-        <% profiles.forEach(function(profile){ %>
-                <div class="card">
-                        <picture class="thumbnail">
-                            <img class="card-img-top img-fluid" src="<%= profile.image %>">
-                        </picture>
-                        <h4 class="card-title"><%=profile.name%></h4>
-                        <p class="card-text"><%= profile.role %> @ <strong><%= profile.venue %></strong></p>
-                        <p>
-                            <a href="/profiles/<%= profile._id %>" class="btn btn-outline-info">Meet Me</a>
-                        </p>
-                </div>
-        <% }); %>    
-        </div>
+            <% profiles.forEach(function(profile){ %>
+                    <div class="card">
+                            <picture class="thumbnail">
+                                <img class="card-img-top img-fluid" src="<%= profile.image %>">
+                            </picture>
+                            <h4 class="card-title"><%=profile.name%></h4>
+                            <p class="card-text"><%= profile.role %> @ <strong><%= profile.venue %></strong></p>
+                            <p>
+                                <a href="/profiles/<%= profile._id %>" class="btn btn-outline-info">Meet Me</a>
+                            </p>
+                    </div>
+            <% }); %>    
     </section>
+    
 </div>
 
 <br>

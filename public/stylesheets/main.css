@@ -252,7 +252,7 @@ input.form-control::-webkit-input-placeholder { color: Silver; }  /* WebKit, Bli
 }
 
 @media screen and (min-width: 60em) {
-
+    
     .card {
         flex: 0 1 calc(25% - 1em);
     }

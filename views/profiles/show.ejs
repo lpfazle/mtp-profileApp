@@ -5,7 +5,7 @@
         <div class="col-md-9">
             <div id="card-no-outline" class="card">
                     <h1 class="card-title">MEET <%=profile.name%></h1>
-                    <h4 class="card-text"><%= profile.role %> @ <strong><%= profile.venue %></strong></h4>
+                    <h4 class="card-text"><%= profile.role %> @ <strong><%= profile.venue %></strong> in <%= profile.currentCity %>, <%= profile.currentCountry %></h4>
                     <img class="card-img-top img-fluid" src="<%= profile.image %>">
                     <p class="qoute">" <%= profile.quote %> "</p>                
                     <div class="caption-full">
@@ -33,22 +33,21 @@
                     </div>
             </div>
         </div>
-        <div class="col-sm-3 mb20">
-                <h2 id="mtp-h4">Resides <%= profile.currentCity %>, <%= profile.currentCountry %></h2>
-                <h4>Follow this legend</h4>
+        <div class="col-xs-6 col-sm-3 mb20">
+                <h2 id="mtp-h4">I recommend you try</h2>
+                <div class="list-group">
+                    <ul class="social-list">
+                        <li><p><i class="fa fa-coffee" aria-hidden="true"></i>  <%= profile.recommendsFirst %></p></li>
+                        <li><p><i class="fa fa-cutlery" aria-hidden="true"></i>  <%= profile.recommendsSecond %></p></li>
+                        <li><p><i class="fa fa-glass" aria-hidden="true"></i>  <%= profile.recommendsThird %></p></li>
+                    </ul>
+                </div>
+                </br>
+                <h2 id="mtp-h4">Follow Me</h2>
                 <div class="list-group">
                     <ul class="social-list">
                         <li><i class="fa fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/<%= profile.instaHandle %>" target="_blank">/<%= profile.instaHandle %></a></li>
                         <li><i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/<%= profile.twitterHandle %>" target="_blank">/<%= profile.twitterHandle %></a></li>
-                    </ul>
-                </div>
-                </br>
-                <h2 id="mtp-h4"><%= profile.name %> recommends </h2>
-                <div class="list-group">
-                    <ul class="social-list">
-                        <li><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><p><%= profile.recommendsFirst %></p></li>
-                        <li><i class="fa fa-star"><i class="fa fa-star"></i></i><p><%= profile.recommendsSecond %></p></li>
-                        <li><i class="fa fa-star"></i><p><%= profile.recommendsThird %></p></li>
                     </ul>
                 </div>
         </div>

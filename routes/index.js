@@ -20,6 +20,16 @@ router.get("/register", function(req, res){
     res.render("register");
 });
 
+// Show terms page
+router.get("/terms", function(req, res) {
+   res.render("terms"); 
+});
+
+// Show terms page
+router.get("/privacy", function(req, res) {
+   res.render("privacy"); 
+});
+
 // Handle sign up logic
 router.post("/register", function(req, res) {
     var newUser = new User({username: req.body.username});

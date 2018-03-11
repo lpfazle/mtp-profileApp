@@ -35,7 +35,7 @@ middlewareObj.checkJobOwnership = function(req, res, next) {
                res.redirect("back");
            } else {
                // does user own job?
-                if(foundJob.author.id.equals(req.user._id)){
+                if(foundJob.jobAuthor.id.equals(req.user._id)){
                   next();
                 } else {
                     req.flash("error", "You don't have permission to do that");

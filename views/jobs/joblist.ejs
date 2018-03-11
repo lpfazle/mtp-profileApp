@@ -19,6 +19,7 @@
         <% jobs.forEach(function(job){ %>
             <tr>
                 <th id="#mtp-h1"><strong><%=job.jobVenueName%></strong> is looking for a <strong><%= job.jobRole %></strong></th>
+                <th id="#mtp-h1"><strong><%=job.jobLocation %></strong>, <strong><%= job.jobCountry %></strong></th>
                 <th><a href="/jobs/<%= job._id %>" class="btn btn-outline-primary btn-sm">Learn More</a></th>
             </tr>    
         <% }); %> 

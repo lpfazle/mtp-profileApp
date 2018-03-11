@@ -22,7 +22,7 @@ var profileSchema = new mongoose.Schema({
    recommendsFirst: String,
    recommendsSecond: String,
    recommendsThird: String,
-   createdDate: String, 
+   createdDate:{ type: Date, default: Date.now },
    author: {
       id: {
          type: mongoose.Schema.Types.ObjectId,

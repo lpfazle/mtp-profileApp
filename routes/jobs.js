@@ -21,7 +21,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
    var jobDesc = req.body.jobDescription;
    var jobRole = req.body.jobRole;
    var jobStartDate = req.body.jobStartDate;
-   var jobCity = req.body.jobCity;
+   var jobLocation = req.body.jobLocation;
    var jobCountry = req.body.jobCountry;
    var jobContactName = req.body.jobContactName;
    var jobContactPhone = req.body.jobContactPhone;
@@ -30,7 +30,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
        id: req.user._id,
        username: req.user.username
    }
-   var newJob = {jobVenueName: jobVenueName, jobDesc: jobDesc, jobRole: jobRole, jobStartDate: jobStartDate, jobCity: jobCity, jobCountry: jobCountry, jobAuthor: jobAuthor, jobContactName: jobContactName, jobContactPhone: jobContactPhone, jobContactEmail: jobContactEmail}
+   var newJob = {jobVenueName: jobVenueName, jobDesc: jobDesc, jobRole: jobRole, jobStartDate: jobStartDate, jobLocation: jobLocation, jobCountry: jobCountry, jobAuthor: jobAuthor, jobContactName: jobContactName, jobContactPhone: jobContactPhone, jobContactEmail: jobContactEmail}
    //Create a new job and save to DB
    Jobs.create(newJob, function(err, newlyCreatedJob){
        if(err){
@@ -75,7 +75,7 @@ router.get("/:id/edit", middleware.checkJobOwnership, function(req, res) {
 
 // UPDATE Job route
 router.put("/:id", middleware.checkJobOwnership, function(req, res){
-    Jobs.findByIdAndUpdate(req.params.id, req.body.job, function(err, updatedJob){
+    Jobs.findByIdAndUpdate(req.params.id, req.body.jobs, function(err, updatedJob){
         if (err){
             res.redirect("/jobs");
         } else {

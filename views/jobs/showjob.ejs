@@ -8,6 +8,10 @@
             <br>
             <div class="card">
                 <div class="card-text">
+                    <h4>This job is located in <strong><%= jobs.jobLocation %>, <%= jobs.jobCountry %></strong></h4>
+                </div>
+                <br>
+                <div class="card-text">
                     <strong><p>Job description</p></strong>
                     <p><%= jobs.jobDesc %></p>
                 </div>
@@ -16,7 +20,7 @@
                     <p><%= jobs.jobStartDate %></p>
                 </div>
                 <div class="card-text">
-                    <strong><p>Interested? Contact</p></strong>
+                    <strong><p>Think you got what it takes? Please contact:</p></strong>
                     <p><%= jobs.jobContactName %> on <%= jobs.jobContactPhone %></p>
                     <p>email: <a href="mailto:<%= jobs.jobContactEmail %>"><%= jobs.jobContactEmail %></a></p>
                 </div>     
@@ -25,41 +29,18 @@
                         <p>posted by <%= jobs.jobAuthor.username %> on <%= jobs.date %></p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!--<div class="row">
-        <div class="col-md-9">
-            <div class="well">
-                        <div class="text-right">
-                                <a class="btn btn-mtp-black" href="/jobs/<%= jobs._id %>/comments/new">Add a comment</a>
-                        </div>
-                        <hr>
-                        <% jobs.comments.forEach(function(comment){ %>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <strong><%= comment.jobAuthor.username %></strong>
-                                    <span class="pull-right">10 days ago</span>
-                                    <p>
-                                        <%= comment.text %>
-                                    </p>
-                                <% if(currentUser && comment.jobAuthor.id.equals(currentUser._id)){ %>
-                                    <a class="btn btn-xs btn-warning" 
-                                        href="/jobs/<%= jobs._id %>/comments/<%= comment._id %>/edit">
-                                        Edit
-                                    </a>
-                                    <form id="delete-form" action="/jobs/<%= jobs._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                                        <input type="submit" class="btn btn-xs btn-danger" value="Delete">
-                                    </form>
-                                <% } %>
-                                </div>
-                            </div>
-                        <% }) %>    
-                    </div>
+                <div class="col-lg-3">
+                <% if(currentUser && jobs.jobAuthor.id.equals(currentUser._id)){ %>
+                    <a class="btn btn-xs btn-warning" href="/jobs/<%= jobs._id %>/edit">Edit</a>
+                    <form id="delete-form" action="/jobs/<%= jobs._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-xs btn-danger">Delete</button>
+                    </form>
+                <% } %>
                 </div>
             </div>
+            <br>
         </div>
-    </div>-->
+    </div>
 </div>    
 
 <% include ../partials/footer %>

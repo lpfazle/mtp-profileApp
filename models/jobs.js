@@ -4,7 +4,7 @@ var jobSchema = new mongoose.Schema({
    jobVenueName: String,
    jobDesc: String,
    jobRole: String,
-   jobCity: String,
+   jobLocation: String,
    jobCountry: String,
    jobContactName: String, 
    jobContactPhone: String, 

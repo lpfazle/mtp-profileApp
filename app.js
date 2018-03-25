@@ -17,6 +17,8 @@ var commentRoutes       = require("./routes/comments"),
     indexRoutes          = require("./routes/index"),
     jobRoutes          = require("./routes/jobs");
 
+console.log(process.env.DATABASEURL);
+
 //mongoose.connect("mongodb://localhost/mtp_profiles");
 mongoose.connect("mongodb://elcapitano:20Vills09@ds121965.mlab.com:21965/mtpprofiles");
 

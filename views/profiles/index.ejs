@@ -22,7 +22,7 @@
                     <div class="card">
                             <img class="card-img-top img-fluid" src="<%= profile.image %>">
                             <div class="card-text-padding">
-                                <h4 id="mtp-h1"><%=profile.name%></h4>
+                                <a href="/profiles/<%= profile._id %>" id="mtp-h1"><h4><%=profile.name%></h4></a>
                                 <p class="card-text"><%= profile.role %> @ <strong><%= profile.venue %></strong></p>
                                 <p>
                                     <a href="/profiles/<%= profile._id %>" class="btn btn-outline-info">Meet Me</a>

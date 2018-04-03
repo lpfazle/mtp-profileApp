@@ -4,32 +4,34 @@
     <div class="row">
         <div class="col-md-9">
             <div id="card-no-outline" class="card">
-                    <h1 class="card-title">MEET <%=profile.name%></h1>
+                    <h1 class="card-title show-name">MEET <%=profile.name%></h1>
                     <h4 class="card-text"><%= profile.role %> @ <strong><%= profile.venue %></strong> in <%= profile.currentCity %>, <%= profile.currentCountry %></h4>
                     <img class="card-img-top img-fluid" src="<%= profile.image %>">
                     <p class="qoute">" <%= profile.quote %> "</p>                
-                    <div class="caption-full">
-                            <strong><p>Here is a little into about <%=profile.name%></p></strong>
-                            <p><%= profile.description %></p>
-                            <strong><p>I cut my teeth and learnt all my skills by..</p></strong>
-                            <p><%= profile.learnSkills %></p>
-                            <strong><p>The achievement I'm most proud of is..</p></strong>
-                            <p><%= profile.achievements %></p>
-                            <strong><p>I'm really passionate about..</p></strong>
-                            <p><%= profile.passionateAbout %></p>
-                            <strong><p>What I love about my industry is..</p></strong>
-                            <p><%= profile.industryLove %></p>
-                            <strong><p>If i could change something about my industry it would be..</p></strong>
-                            <p><%= profile.industryImprove %></p>
-                            <p>
-                                <em>Submitted by <%= profile.author.username %></em>
-                            </p>
-                            <% if(currentUser && profile.author.id.equals(currentUser._id)){ %>
-                            <a class="btn btn-xs btn-warning" href="/profiles/<%= profile._id %>/edit">Edit</a>
-                            <form id="delete-form" action="/profiles/<%= profile._id %>?_method=DELETE" method="POST">
-                                <button class="btn btn-xs btn-danger">Delete</button>
-                            </form>
-                            <% } %>
+                    <div class="card-text-padding">
+                        <div class="caption-full">
+                                <strong><p>Here is a little into about <%=profile.name%></p></strong>
+                                <p><%= profile.description %></p>
+                                <strong><p>I cut my teeth and learnt all my skills by..</p></strong>
+                                <p><%= profile.learnSkills %></p>
+                                <strong><p>The achievement I'm most proud of is..</p></strong>
+                                <p><%= profile.achievements %></p>
+                                <strong><p>I'm really passionate about..</p></strong>
+                                <p><%= profile.passionateAbout %></p>
+                                <strong><p>What I love about my industry is..</p></strong>
+                                <p><%= profile.industryLove %></p>
+                                <strong><p>If i could change something about my industry it would be..</p></strong>
+                                <p><%= profile.industryImprove %></p>
+                                <p>
+                                    <em>Submitted by <%= profile.author.username %></em>
+                                </p>
+                                <% if(currentUser && profile.author.id.equals(currentUser._id)){ %>
+                                <a class="btn btn-xs btn-warning" href="/profiles/<%= profile._id %>/edit">Edit</a>
+                                <form id="delete-form" action="/profiles/<%= profile._id %>?_method=DELETE" method="POST">
+                                    <button class="btn btn-xs btn-danger">Delete</button>
+                                </form>
+                                <% } %>
+                        </div>
                     </div>
             </div>
         </div>

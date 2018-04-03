@@ -42,6 +42,10 @@ footer {
     padding-top: 10px;
 }
 
+a {
+    color: black;
+}
+
 textarea.form-control::-webkit-input-placeholder { color: Silver; }  /* WebKit, Blink, Edge */
 input.form-control::-webkit-input-placeholder { color: Silver; }  /* WebKit, Blink, Edge */
 
@@ -110,6 +114,7 @@ input.form-control::-webkit-input-placeholder { color: Silver; }  /* WebKit, Bli
 .card-text {
     padding-bottom: 10px;
     font-family: Roboto,sans-serif;
+    font-size: 0.8em;
 }
 
 #card-no-outline {
@@ -198,7 +203,6 @@ input.form-control::-webkit-input-placeholder { color: Silver; }  /* WebKit, Bli
     font-weight: 400;
     font-size: 3em;
     text-transform: uppercase;
-    margin-top: 10px;
 }
 
 .show-name-create {
@@ -212,7 +216,7 @@ input.form-control::-webkit-input-placeholder { color: Silver; }  /* WebKit, Bli
 
 #show-btn {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .form-margin {

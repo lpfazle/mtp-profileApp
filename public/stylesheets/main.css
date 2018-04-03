@@ -114,7 +114,7 @@ input.form-control::-webkit-input-placeholder { color: Silver; }  /* WebKit, Bli
 .card-text {
     padding-bottom: 10px;
     font-family: Roboto,sans-serif;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 #card-no-outline {

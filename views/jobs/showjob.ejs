@@ -31,10 +31,17 @@
                 </div>
                 <div class="col-lg-3">
                 <% if(currentUser && jobs.jobAuthor.id.equals(currentUser._id)){ %>
-                    <a class="btn btn-xs btn-warning" href="/jobs/<%= jobs._id %>/edit">Edit</a>
+                    <a class="btn btn-xs btn-warning" href="/jobs/<%= jobs._id %>/edit">Edit Job</a>
                     <form id="delete-form" action="/jobs/<%= jobs._id %>?_method=DELETE" method="POST">
-                        <button class="btn btn-xs btn-danger">Delete</button>
+                        <button class="btn btn-xs btn-danger">Delete Job</button>
                     </form>
+                <% } %>
+                <% if(!currentUser) { %>
+                    <div>
+                        <p><a href="/register">Sign up</a> or <a href="/login">login</a> to apply</p>
+                    </div>
+                <% } else { %>
+                    <button class="btn btn-outline-primary">Apply</button>
                 <% } %>
                 </div>
             </div>

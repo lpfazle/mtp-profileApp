@@ -4,7 +4,9 @@
     <div class="row">
         <div class="col-md-9">
             <div id="card-no-outline" class="card">
-                    <h1 class="card-title show-name">MEET <%=profile.name%></h1>
+                    <h1 class="card-title show-name">
+                        MEET <%=profile.name%>
+                    </h1>
                     <h4 class="card-text"><%= profile.role %> @ <strong><%= profile.venue %></strong> in <%= profile.currentCity %>, <%= profile.currentCountry %></h4>
                     <img class="card-img-top img-fluid" src="<%= profile.image %>">
                     <p class="qoute">" <%= profile.quote %> "</p>                
@@ -22,9 +24,15 @@
                                 <p><%= profile.industryLove %></p>
                                 <strong><p>If i could change something about my industry it would be..</p></strong>
                                 <p><%= profile.industryImprove %></p>
-                                <p>
+                                <!--<p>
                                     <em>Submitted by <%= profile.author.username %></em>
-                                </p>
+                                </p>-->
+                                <div class="list-group">
+                                    <ul class="social-list">
+                                        <li>12 <i class="fas fa-heart" aria-hidden="true"></i> 's</li>
+                                        <li><button class="btn btn-outline-primary">Gimme me some <i class="fas fa-heart"></i></button></li>
+                                    </ul>
+                                </div> 
                                 <% if(currentUser && profile.author.id.equals(currentUser._id)){ %>
                                 <a class="btn btn-xs btn-warning" href="/profiles/<%= profile._id %>/edit">Edit</a>
                                 <form id="delete-form" action="/profiles/<%= profile._id %>?_method=DELETE" method="POST">
@@ -35,23 +43,24 @@
                     </div>
             </div>
         </div>
-        <div class="col-xs-12 col-lg-3 mb20">
+        </br>
+        <div class="card col-xs-12 col-md-3 col-lg-3 mb20" style="padding-top:10px;">
                 <h2 id="mtp-h4">I recommend you try</h2>
                 <div class="list-group">
-                    <ul class="social-list">
-                        <li><p><i class="fa fa-coffee" aria-hidden="true"></i>  <%= profile.recommendsFirst %></p></li>
-                        <li><p><i class="fa fa-cutlery" aria-hidden="true"></i>  <%= profile.recommendsSecond %></p></li>
-                        <li><p><i class="fa fa-glass" aria-hidden="true"></i>  <%= profile.recommendsThird %></p></li>
+                    <ul id="mp-h4" class="social-list">
+                        <li><i class="fas fa-coffee" aria-hidden="true"></i>  <%= profile.recommendsFirst %></li>
+                        <li><i class="fas fa-utensils" aria-hidden="true"></i>  <%= profile.recommendsSecond %></li>
+                        <li><i class="fas fa-glass-martini" aria-hidden="true"></i>  <%= profile.recommendsThird %></li>
                     </ul>
                 </div>
                 </br>
                 <h2 id="mtp-h4">Follow Me</h2>
                 <div class="list-group">
                     <ul class="social-list">
-                        <li><i class="fa fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/<%= profile.instaHandle %>" target="_blank">/<%= profile.instaHandle %></a></li>
-                        <li><i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/<%= profile.twitterHandle %>" target="_blank">/<%= profile.twitterHandle %></a></li>
+                        <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/<%= profile.instaHandle %>" target="_blank">/<%= profile.instaHandle %></a></li>
+                        <li><i class="fab fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/<%= profile.twitterHandle %>" target="_blank">/<%= profile.twitterHandle %></a></li>
                     </ul>
-                </div>
+                </div>    
         </div>
     </div>
     <div class="row">

@@ -17,7 +17,8 @@ var commentRoutes       = require("./routes/comments"),
     indexRoutes          = require("./routes/index"),
     jobRoutes          = require("./routes/jobs");
 
-mongoose.connect(process.env.DATABASEURL);
+mongoose.connect("mongodb://localhost/mtp_profiles");
+//mongoose.connect(process.env.DATABASEURL);
 
 //seedDB();
 app.use(bodyParser.urlencoded({extended:true}));
